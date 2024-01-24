@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8fae5;
+  width: 96vw;
+  height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-main h1 {
+  margin-bottom: 3vh;
+}
+
+.calculator {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 438px;
+  height: 507px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 18px 39px -23px rgba(0, 0, 0, 0.75);
+}
+
+.resul {
+  border: 1px solid #ebd9b4;
+  display: flex;
+  height: 24%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: #c4ab8d;
+  flex-direction: column;
+}
+
+.resul > h1:first-child {
+
+  color: azure;
+  font-size: 23px;
+}
+
+.resul h1 {
+  margin: 2px 40px 4px 1px;
+  color: azure;
+  font-size: 51px;
+}
+
+.buttons {
+  height: 76%;
+  background-color: #c4ab8d;
+}
+
+button {
+  color: azure;
+  font-size: 30px;
+  background-color: #43766c;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #76453b;
+}
+
+.row-buttons {
+  display: flex;
+  height: 20%;
+}
+
+.row-buttons div {
+  width: 25%;
+}
+
+.row-buttons .C {
+  width: 50%;
+  box-shadow: #76453b;
+}
+
+.num-symbol {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid #ebd9b4;
+}

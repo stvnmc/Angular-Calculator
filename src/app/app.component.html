@@ -1,0 +1,111 @@
+<div class="cont-main">
+  <h1>Calculator Angular</h1>
+  <div class="calculator">
+    <div class="resul">
+      <h1>{{ funcT }}</h1>
+      <h1>{{ calValue | number }}</h1>
+    </div>
+    <div class="buttons">
+      <div class="row-buttons">
+        <div class="C">
+          <button class="num-symbol" (click)="onClickValue('c', 'function')">
+            C
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('%', 'function')">
+            %
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('/', 'function')">
+            /
+          </button>
+        </div>
+      </div>
+      <div class="row-buttons">
+        <div>
+          <button class="num-symbol" (click)="onClickValue('7', 'number')">
+            7
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('8', 'number')">
+            8
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('9', 'number')">
+            9
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('*', 'function')">
+            *
+          </button>
+        </div>
+      </div>
+      <div class="row-buttons">
+        <div>
+          <button class="num-symbol" (click)="onClickValue('4', 'number')">
+            4
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('5', 'number')">
+            5
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('6', 'number')">
+            6
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('-', 'function')">
+            -
+          </button>
+        </div>
+      </div>
+      <div class="row-buttons">
+        <div>
+          <button class="num-symbol" (click)="onClickValue('1', 'number')">
+            1
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('2', 'number')">
+            2
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('3', 'number')">
+            3
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('+', 'function')">
+            +
+          </button>
+        </div>
+      </div>
+      <div class="row-buttons">
+        <div>
+          <button class="num-symbol" (click)="onClickValue('0', 'number')">
+            0
+          </button>
+        </div>
+        <div>
+          <button class="num-symbol" (click)="onClickValue('.', 'function')">
+            .
+          </button>
+        </div>
+        <div class="C">
+          <button class="num-symbol" (click)="onClickValue('=', 'function')">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
