@@ -13,7 +13,9 @@ body {
 }
 
 .cont-main h1 {
+  color: #737394;
   margin-bottom: 3vh;
+  font-size: 42px;
 }
 
 .calculator {
@@ -37,7 +39,6 @@ body {
 }
 
 .resul > h1:first-child {
-
   color: azure;
   font-size: 23px;
 }

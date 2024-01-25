@@ -9,13 +9,19 @@ export class AppComponent {
   title = 'asmr-ang-calculator';
 
   calValue: number = 0;
-  funcT: any = 'Nofunction';
+  funcT: any = 'NoFunction';
 
   calNumber: string = 'noValue';
+
+  firsNumber: number = 0;
+  secondNumber: number = 0;
 
   onClickValue(val: string, type: any) {
     if (type == 'number') {
       this.onNumberClick(val);
+    }
+    if (type == 'function') {
+      this.onFuncionClick(val);
     }
   }
 
@@ -26,5 +32,66 @@ export class AppComponent {
       this.calNumber = val;
     }
     this.calValue = parseFloat(this.calNumber);
+  }
+
+  onFuncionClick(val: string) {
+    if (val == 'c') {
+      this.clearAll();
+    } else if (this.funcT === 'NoFunction') {
+      this.firsNumber = this.calValue;
+      this.calValue = 0;
+      this.calNumber = 'noValue';
+      this.funcT = val;
+    } else if (this.funcT != 'NoFunction') {
+      this.secondNumber = this.calValue;
+      this.valueCalculate(val);
+    }
+  }
+
+  valueCalculate(val: string) {
+    if (this.funcT == '+') {
+      const Total = this.firsNumber + this.secondNumber;
+      this.totalAssingValues(Total, val);
+    }
+    if (this.funcT == '-') {
+      const Total = this.firsNumber - this.secondNumber;
+      this.totalAssingValues(Total, val);
+    }
+    if (this.funcT == '*') {
+      const Total = this.firsNumber * this.secondNumber;
+      this.totalAssingValues(Total, val);
+    }
+    if (this.funcT == '%') {
+      const Total = this.firsNumber % this.secondNumber;
+      this.totalAssingValues(Total, val);
+    }
+    if (this.funcT == '/') {
+      const Total = this.firsNumber / this.secondNumber;
+      this.totalAssingValues(Total, val);
+    }
+  }
+
+  totalAssingValues(Total: number, val: string) {
+    this.calValue = Total;
+    this.firsNumber = Total;
+    this.secondNumber = 0;
+    this.calNumber = 'noValue';
+    this.funcT = val;
+    if (val == '=') this.onEqualPress();
+  }
+
+  onEqualPress() {
+    this.firsNumber = 0;
+    this.secondNumber = 0;
+    this.funcT = 'NoFunction';
+    this.calNumber = 'noValue';
+  }
+
+  clearAll() {
+    this.firsNumber = 0;
+    this.secondNumber = 0;
+    this.calValue = 0;
+    this.funcT = 'NoFunction';
+    this.calNumber = 'noValue';
   }
 }
